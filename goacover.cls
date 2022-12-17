@@ -39,7 +39,11 @@
 
 \newcommand{\makeversion}{
 	\begin{center}
+		 \ifdefined\@pubsherpa
 		{\LARGE \textbf{\@pubversion{} version}\footnote{ Level of access, as per info available on Sherpa Romeo: \url{\@pubsherpa} (\@pubsherpadate)}}\\
+		\else
+		{\LARGE \textbf{\@pubversion{} version}}\\
+		\fi
 		\vspace{0.5cm}
 		{\Large  \@pubstate{} on \@pubstatedate}
 	\end{center}
